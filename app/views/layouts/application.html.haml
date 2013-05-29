@@ -1,0 +1,38 @@
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}
+    %title= t('site.title')
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    %header
+      .navbar
+        .navbar-inner
+          .container
+            .logo
+              = image_tag 'logo.png'
+            %ul.nav.pull-right
+
+              - if user_signed_in?
+                %li
+                  = link_to edit_user_registration_path do
+                    = image_tag current_user.avatar.url(:thumb), width: 25
+                    = current_user
+                %li
+                  = link_to destroy_user_session_path, method: :delete do
+                    %span.text= t("actions.sign_out")
+
+              - else
+                %li
+                  = link_to user_omniauth_authorize_path(:facebook) do
+                    = image_tag 'facebook_login.png'
+
+    .container
+      = render 'util/errors'
+      = yield
+      
+    %footer
+      .container 
+        .pull-right

@@ -1,0 +1,29 @@
+pt-BR:
+  activerecord:
+    models:
+      user: Usuário
+      post: Posts
+
+    attributes:  
+      user:
+        email: Email
+        encrypted_password: Senha
+        current_password: Senha atual
+        reset_password_token: Token de recuperação de senha
+        name: Nome completo
+        personal_data: Dados pessoais
+        access_data: Dados de acesso
+        password: Senha
+        password_confirmation: Confirmar senha
+        avatar: Foto
+
+      post:
+        user: Usuário
+        categories: Categoria
+        venue: Local
+        description: Descrição
+        photo: Foto
+        category_list:
+          nail: Unha
+          hair: Cabelo
+          makeup: Maquiagem

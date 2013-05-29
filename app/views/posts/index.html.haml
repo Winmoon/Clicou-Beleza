@@ -1,0 +1,43 @@
+.content-header
+  .pull-left
+    %h2= t('activerecord.models.post').pluralize
+  .pull-right
+    = link_to new_post_path, class: 'btn btn-success', title: "#{t('actions.create')} #{t('activerecord.models.post').downcase}" do
+      %i.icon-plus.icon-white
+  .clearfix
+  %ul.breadcrumb
+    %li
+      = link_to t('views.home'), root_path
+      %span.divider /
+    %li.active= t('activerecord.models.post').pluralize
+  
+.content-body
+  - if @posts.any?
+    %table.table.table-bordered
+      %thead
+        %tr
+          %th= t('activerecord.attributes.post.user')
+          %th= t('activerecord.attributes.post.categories')
+          %th= t('activerecord.attributes.post.venue')
+          %th= t('activerecord.attributes.post.description')
+          %th= t('activerecord.attributes.post.deleted_at')
+          %th= t('words.actions')
+      %tbody
+        - @posts.each do |post|
+          %tr
+            %td= post.user
+            %td= post.categories
+            %td= post.venue
+            %td= post.description
+            %td= image_tag post.photo.url
+            %td.actions
+              .btn-group
+                = link_to post, title: t('actions.show'), class: 'btn' do
+                  %i.icon-eye-open
+                = link_to edit_post_path(post), title: t('actions.edit'), class: 'btn' do
+                  %i.icon-edit
+                = link_to post, title: t('actions.destroy'), confirm: t('actions.confirm'), method: :delete, class: 'btn' do
+                  %i.icon-remove
+    = will_paginate @posts
+  - else
+    = render 'util/no_item_found'

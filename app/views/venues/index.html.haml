@@ -1,0 +1,28 @@
+.content-header
+  .pull-left
+    %h2= t('activerecord.models.venue').pluralize
+  .pull-right
+    = link_to new_venue_path, class: 'btn btn-success', title: "#{t('actions.create')} #{t('activerecord.models.venue').downcase}" do
+      %i.icon-plus.icon-white
+  .clearfix
+  %ul.breadcrumb
+    %li
+      = link_to t('views.home'), root_path
+      %span.divider /
+    %li.active= t('activerecord.models.venue').pluralize
+  
+.content-body
+  - if @venues.any?
+    %table.table.table-bordered
+      %thead
+        %tr
+          %th= t('activerecord.attributes.venue.name')
+          %th= t('activerecord.attributes.venue.venue_id')
+          %th= t('activerecord.attributes.venue.deleted_at')
+          %th= t('words.actions')
+      %tbody
+        - @venues.each do |venue|
+          %tr
+            %td= venue.name
+            %td= venue_location(venue.location)
+            %td= venue.to_json

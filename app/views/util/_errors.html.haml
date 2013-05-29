@@ -1,0 +1,7 @@
+- if flash.any?
+  .content-body-messages
+    .flash_messages
+      - flash.each do |name, msg|
+        = content_tag :div, class: "alert alert-#{name}" do
+          %a.close{href: "#", data: {dismiss: "alert"} } ×
+          = msg

@@ -1,0 +1,27 @@
+.content-header 
+  %h2
+    %i.icofont-home
+    = t("views.my_account")
+.content-body-body
+  = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
+    = f.error_notification
+    .form-inputs
+      %fieldset
+        %legend Dados de acesso
+        = f.input :name, :autofocus => true
+        .controls
+          = image_tag resource.avatar.url(:thumb)
+        = f.input :avatar
+
+      %fieldset
+        %legend Dados de acesso
+
+        = f.input :email, :required => true, :autofocus => true
+        = f.input :password, :autocomplete => "off", :hint => t('words.leave_blank'), :required => false
+        = f.input :password_confirmation, :required => false
+      %fieldset
+        %legend Senha atual
+        = f.input :current_password, :hint => t('words.password_confirmation'), :required => true
+  
+    .form-actions
+      = f.button :submit, "Update"

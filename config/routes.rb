@@ -1,58 +1,40 @@
 ClicouBeleza::Application.routes.draw do
-  # The priority is based upon order of creation:
-  # first created -> highest priority.
 
-  # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
-  # Keep in mind you can assign values other than :controller and :action
+  scope :user do
+    devise_for :users, controllers: { sessions: "users/sessions", omniauth_callbacks: "users/omniauth_callbacks" }
+    resources :venues
+    resources :posts
+  end
 
-  # Sample of named route:
-  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
-  # This route can be invoked with purchase_url(:id => product.id)
+  root :to => 'home#index'
 
-  # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+  resources :home, only: :index
 
-  # Sample resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
-
-  # Sample resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Sample resource route with more complex sub-resources
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', :on => :collection
-  #     end
-  #   end
-
-  # Sample resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
-
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
-
-  # See how all your routes lay out with "rake routes"
-
-  # This is a legacy wild controller route that's not recommended for RESTful applications.
-  # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
 end
+#== Route Map
+# Generated on 27 Mai 2013 13:21
+#
+#             user_session POST   /users/sign_in(.:format)               users/sessions#create
+#     destroy_user_session DELETE /users/sign_out(.:format)              users/sessions#destroy
+#  user_omniauth_authorize        /users/auth/:provider(.:format)        users/omniauth_callbacks#passthru {:provider=>/(?!)/}
+#   user_omniauth_callback        /users/auth/:action/callback(.:format) users/omniauth_callbacks#(?-mix:(?!))
+#            user_password POST   /users/password(.:format)              devise/passwords#create
+#        new_user_password GET    /users/password/new(.:format)          devise/passwords#new
+#       edit_user_password GET    /users/password/edit(.:format)         devise/passwords#edit
+#                          PUT    /users/password(.:format)              devise/passwords#update
+# cancel_user_registration GET    /users/cancel(.:format)                devise/registrations#cancel
+#        user_registration POST   /users(.:format)                       devise/registrations#create
+#    new_user_registration GET    /users/sign_up(.:format)               devise/registrations#new
+#   edit_user_registration GET    /users/edit(.:format)                  devise/registrations#edit
+#                          PUT    /users(.:format)                       devise/registrations#update
+#                          DELETE /users(.:format)                       devise/registrations#destroy
+#                   venues GET    /venues(.:format)                      venues#index
+#                          POST   /venues(.:format)                      venues#create
+#                new_venue GET    /venues/new(.:format)                  venues#new
+#               edit_venue GET    /venues/:id/edit(.:format)             venues#edit
+#                    venue GET    /venues/:id(.:format)                  venues#show
+#                          PUT    /venues/:id(.:format)                  venues#update
+#                          DELETE /venues/:id(.:format)                  venues#destroy
+#                     root        /                                      home#index
+#               home_index GET    /home(.:format)                        home#index
+#            venues2_index GET    /venues2(.:format)                     venues2#index

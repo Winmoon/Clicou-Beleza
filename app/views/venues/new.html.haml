@@ -1,0 +1,18 @@
+.content-header
+  .pull-left
+    %h2 #{t('actions.create')} #{t('activerecord.models.venue').downcase}
+  .pull-right
+    = link_to venues_path, class: 'btn tip-bottom', title: t('actions.back') do
+      %i.icon-arrow-left
+  .clearfix
+  %ul.breadcrumb
+    %li
+      = link_to t('views.home'), root_path
+      %span.divider /
+    %li
+      = link_to t('activerecord.models.venue').pluralize, venues_path
+      %span.divider /
+    %li.active #{t('actions.create')} #{t('activerecord.models.venue').downcase}  
+         
+.content-body
+  = render 'form'

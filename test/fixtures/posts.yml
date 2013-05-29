@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user: 
+  categories: MyString
+  venue: 1
+  description: MyString
+  deleted_at: 2013-05-27 15:00:31
+
+two:
+  user: 
+  categories: MyString
+  venue: 1
+  description: MyString
+  deleted_at: 2013-05-27 15:00:31

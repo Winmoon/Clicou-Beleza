@@ -1,0 +1,24 @@
+.content-header
+  .pull-left
+    %h2 #{t('actions.edit')} #{t('activerecord.models.post').downcase} - #{@post}
+  .pull-right
+    .btn-group
+      = link_to posts_path, class: 'btn', title: t('actions.back') do
+        %i.icon-arrow-left
+      = link_to @post, class: 'btn tip-bottom', title: t('actions.show') do
+        %i.icon-eye-open
+      = link_to new_post_path, class: 'btn btn-success', title: "#{t('actions.create')} #{t('activerecord.models.post').downcase}" do
+        %i.icon-plus.icon-white
+  .clearfix
+  
+%ul.breadcrumb
+  %li
+    = link_to t('views.home'), root_path
+    %span.divider /
+  %li
+    = link_to t('activerecord.models.post').pluralize, posts_path
+    %span.divider /
+  %li.active #{t('actions.edit')} #{t('activerecord.models.post').downcase} - #{@post}
+
+.content-body
+  = render 'form'

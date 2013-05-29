@@ -1,0 +1,45 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+pt-BR:
+  site:
+    title: "Clicou Beleza"
+  
+  actions: 
+    home: Início
+    destroy: Excluir
+    show: Visualizar
+    edit: Editar
+    send: Enviar
+    click_here: Clique aqui
+    create: Cadastrar
+    update: Atualizar
+    search: Procurar
+    back: Voltar
+    confirm: 'Você tem certeza que deseja continuar?'
+    sign_in: Entrar
+    sign_out: Sair
+    forgot_password: 'Esqueceu sua senha?'
+    forgot_password_send_instructions: 'Resetar minha senha'
+    sign_up_free: Cadastre-se gratuitamente
+    sign_up: Cadastre-se
+  words:
+    actions: Ações
+    no_item_found: Nenhum ítem encontrado!
+    welcome: Seja bem vindo, %{name}!
+    remember_me: "Mantenha-me conectado"
+    leave_blank: Deixe em branco se você não quer mudar este campo
+    password_confirmation: Você precisa informar a senha atual para confirmar as alterações
+    cancel_account: Cancelar minha conta
+    unhappy: Desejo cancelar minha conta agora ->
+    cancel_account_submit: Cancele minha conta.
+
+  controllers:
+    action:
+      success:
+        create: Cadastro realizado com sucesso
+        update: Alteração realizada com sucesso
+        destroy: Exclusão realizada com sucesso
+        restore: Restaurção realizada com sucesso
+        contact_us: Sua mensagem foi enviada com sucesso. Em breve entraremos em contato com você.
+          
