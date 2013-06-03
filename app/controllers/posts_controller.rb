@@ -34,7 +34,7 @@ class PostsController < UserController
     respond_to do |format|
       if @post.update_attributes(params[:post])
         @post.photo.reprocess!
-        format.html { redirect_to edit_post_path(@post), notice: t('controllers.action.success.update') }
+        format.html { redirect_to @post, notice: t('controllers.action.success.update') }
       else
         format.html { render :edit }
       end

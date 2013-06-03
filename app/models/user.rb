@@ -31,7 +31,7 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
-  attr_accessible :name, :avatar
+  attr_accessible :name, :avatar, :user_type, :venue
 
   has_attached_file :avatar, styles: { medium: "95x95>", thumb: "40x40>" }, default_url: "/images/:style/missing.png"
 
@@ -41,7 +41,21 @@ class User < ActiveRecord::Base
 
   validates :avatar, attachment_presence: true
 
+  validates :user_type, presence: true
+
+  validates :venue, presence: true, if: :is_salon?
+
+
+  def is_salon?
+    user_type.to_s == 'salon'
+  end
+
   def to_s
     name
   end
+
+  def self.user_type_list
+    [:user, :salon].collect{ |i| [I18n.t("activerecord.attributes.user.user_type_list.#{i}"), i]}
+  end
+
 end

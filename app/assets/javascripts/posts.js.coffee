@@ -15,6 +15,7 @@ jQuery ($) ->
     onChange: showCoords
     onSelect: showCoords
     onRelease: clearCoords
+    aspectRatio: 1/1
   , ->
     console.log this
 

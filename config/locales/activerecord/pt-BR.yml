@@ -16,6 +16,11 @@ pt-BR:
         password: Senha
         password_confirmation: Confirmar senha
         avatar: Foto
+        user_type: Tipo de usuário
+        venue: Local
+        user_type_list:
+          user: Usuário
+          salon: Salão / Clinica
 
       post:
         user: Usuário

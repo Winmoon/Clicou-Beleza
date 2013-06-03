@@ -16,7 +16,6 @@
     %table.table.table-bordered
       %thead
         %tr
-          %th= t('activerecord.attributes.post.user')
           %th= t('activerecord.attributes.post.categories')
           %th= t('activerecord.attributes.post.venue')
           %th= t('activerecord.attributes.post.description')
@@ -25,11 +24,10 @@
       %tbody
         - @posts.each do |post|
           %tr
-            %td= post.user
-            %td= post.categories
-            %td= post.venue
+            %td= post.categories_sentence
+            %td= post.venue_info
             %td= post.description
-            %td= image_tag post.photo.url
+            %td= image_tag post.photo.url(:cropped)
             %td.actions
               .btn-group
                 = link_to post, title: t('actions.show'), class: 'btn' do

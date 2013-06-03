@@ -2,7 +2,7 @@
 = javascript_include_tag "posts"
 = simple_form_for(@post, defaults: { input_html: { class: 'form-horizontal' } }) do |f|
   = f.error_notification
-  = f.input :categories, collection: Post.category_list, as: :check_boxes
+  = f.input :categories, collection: Post.category_list, as: :check_boxes, checked: @post.categories
   = f.input :venue
   = f.input :description
   = f.input :photo
@@ -10,8 +10,13 @@
   = f.hidden_field :crop_y
   = f.hidden_field :crop_w
   = f.hidden_field :crop_h
-  = image_tag @post.photo.url, id: 'crop_photo'
-  = image_tag @post.photo.url(:large)
+
+  - if @post.persisted?
+    = image_tag @post.photo.url, id: 'crop_photo'
+
+    %br
+    %br
+    = image_tag @post.photo.url(:cropped)
 
   .form-actions
     = f.button :submit, :class => "btn-primary"

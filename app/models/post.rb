@@ -2,7 +2,7 @@ class Post < ActiveRecord::Base
   belongs_to :user
   attr_accessible :categories, :deleted_at, :description, :venue, :photo, :crop_x, :crop_y, :crop_w, :crop_h
 
-  has_attached_file :photo, :styles => { :small => "100x100#", :large => "500x500>" }, :processors => [:cropper], default_url: "/images/:style/missing.png", :processors => [:cropper]
+  has_attached_file :photo, :styles => { :cropped => "5000x5000>" }, default_url: "/images/:style/missing.png", :processors => [:cropper]
   attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
 
   validates :categories, :description, :venue, presence: true
@@ -20,7 +20,11 @@ class Post < ActiveRecord::Base
   end
 
   def categories
-    read_attribute(:categories).split(',')
+    read_attribute(:categories).split(',') if read_attribute(:categories).present?
+  end
+
+  def categories_sentence
+    categories.collect{ |i| I18n.t("activerecord.attributes.post.category_list.#{i}")}.to_sentence if read_attribute(:categories).present?
   end
 
   def Post.category_list
@@ -34,6 +38,11 @@ class Post < ActiveRecord::Base
   def photo_geometry(style = :original)
     @geometry ||= {}
     @geometry[style] ||= Paperclip::Geometry.from_file(photo.path(style))
+  end
+
+  def venue_info
+    client = Foursquare2::Client.new(:client_id => '3JLPOEMCQ05BHK3LAOL0ANTXT1KKYHXDKKAFAPTKR3IAD2E3', :client_secret => 'QSYLJVS0OCDFNTKZ1DZ2IL1BQVKTCCYQ1LVRIPZORSLF503Z')
+    client.venue(venue).name
   end
 
 end
