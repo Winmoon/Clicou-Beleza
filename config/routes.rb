@@ -4,7 +4,10 @@ ClicouBeleza::Application.routes.draw do
     devise_for :users, controllers: { sessions: "users/sessions", omniauth_callbacks: "users/omniauth_callbacks" }
     resources :venues
     resources :posts
-    resources :dashboard, only: :index
+    resources :dashboard, only: [:index, :show] do
+      get 'love', on: :member
+      post 'comment', on: :member
+    end
   end
 
   root :to => 'home#index'

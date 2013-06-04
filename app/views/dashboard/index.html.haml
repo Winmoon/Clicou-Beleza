@@ -9,3 +9,8 @@
       .options
         .venue
           %strong= post.venue_info
+        .loveds
+          = link_to post.loveds.size, love_dashboard_path(post.id)
+        .comments
+          = post.comments.size
+        .clearfix
