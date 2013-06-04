@@ -1,0 +1,11 @@
+.content-body.dashboard
+  - @posts.each do |post|
+    = div_for post do
+      .user
+        = image_tag post.user.avatar.url(:thumb)
+        %strong= post.user
+      .photo= image_tag post.photo.url(:cropped)
+      .description= post.description
+      .options
+        .venue
+          %strong= post.venue_info

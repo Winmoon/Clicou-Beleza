@@ -1,4 +1,17 @@
 %ul
-  %li= link_to venues_path, venues_path
-  %li= link_to posts_path, posts_path
+  %li
+    %p Categorias
 
+    %ul
+      - Post.category_list.each do |category|
+        %li= link_to category[0], dashboard_index_path(category: category[1])
+
+
+
+  %li
+    = link_to t("words.my_profile"), edit_user_registration_path
+
+  - if user_signed_in?
+    %li
+      = link_to destroy_user_session_path, method: :delete do
+        %span.text= t("actions.sign_out")

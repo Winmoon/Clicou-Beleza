@@ -28,7 +28,7 @@ class Post < ActiveRecord::Base
   end
 
   def Post.category_list
-    [:nail, :hair, :makeup].collect{ |i| [I18n.t("activerecord.attributes.post.category_list.#{i}"), i]}
+    [:hair, :nail, :makeup, :look].collect{ |i| [I18n.t("activerecord.attributes.post.category_list.#{i}"), i]}
   end
 
   def cropping?

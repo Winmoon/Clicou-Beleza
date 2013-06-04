@@ -29,6 +29,7 @@ pt-BR:
         description: Descrição
         photo: Foto
         category_list:
-          nail: Unha
           hair: Cabelo
+          nail: Unha
           makeup: Maquiagem
+          look: Look
