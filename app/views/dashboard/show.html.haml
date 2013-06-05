@@ -1,4 +1,4 @@
-= javascript_include_tag "dashboard"
+= javascript_include_tag "posts"
 .content-body.dashboard
   - @posts.each do |post|
     = div_for post do
@@ -11,7 +11,7 @@
         .venue
           %strong= post.venue_info
         .loveds
-          %a{ data: { href: love_dashboard_path(post.id, format: :json) } }= post.loveds.size
+          = link_to post.loveds.size, love_dashboard_path(post.id), remote: true
         .comments
           = post.comments.size
         .clearfix

@@ -40,6 +40,11 @@ $ ->
 
     beforeSend: (req) ->
       req.setRequestHeader "Authorization", make_base_auth("clicoubeleza", "uyP4RnNMGe4coOm6kIcfAt9E1S8AHK9wwHqPZO9xz7I")
+    statusCode:
+      401: ->
+        alert "Fazer login"
+      400: (error) ->
+        alert "Não passou na validação: "+ error.responseText
 
   $.get url("users/sign_in.json"),
     query: "a"

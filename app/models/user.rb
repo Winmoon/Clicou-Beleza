@@ -36,6 +36,7 @@ class User < ActiveRecord::Base
   has_attached_file :avatar, styles: { medium: "95x95>", thumb: "40x40>" }, default_url: "/images/:style/missing.png"
 
   has_many :posts
+  has_many :loveds
 
   validates :name, presence: true, length: { maximum: 255 }
 

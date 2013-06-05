@@ -1,5 +1,5 @@
 class DashboardController < UserController
-  skip_before_filter :authenticate_user!
+  skip_before_filter :authenticate_user!, only: :index
   respond_to :html, :json
   def index
     @posts = Post.paginate(page: params[:page], per_page: 15)
@@ -8,11 +8,14 @@ class DashboardController < UserController
   end
 
   def love
-    @loved = Loved.new()
-    @loved.user_id = current_user.id
+    @loved = current_user.loveds.new()
+    @loved.post_id = params[:id]
 
-    @loved.save!
-    respond_with @loved
+    if @loved.save
+      respond_with @loved
+    else
+      respond_with @loved.errors, status: 400
+    end
   end
 
   def comment
