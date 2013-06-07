@@ -76,6 +76,6 @@ $ ->
       422: (error) ->
         alert "Não passou na validação: "+ error.responseText
 
-# sign_in()
-# sign_up()
-# create_post()
+  # sign_in()
+  sign_up()
+  # create_post()
