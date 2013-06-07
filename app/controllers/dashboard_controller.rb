@@ -19,8 +19,11 @@ class DashboardController < UserController
   end
 
   def comment
-    @comment = Comment.create(params[:comment])
-    respond_with @comment
+    if @comment = Comment.create(params[:comment])
+      respond_with @comment
+    else
+      respond_with @comment.errors, status: 400
+    end
   end
 
   def show
