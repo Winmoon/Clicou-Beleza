@@ -77,5 +77,5 @@ $ ->
         alert "Não passou na validação: "+ error.responseText
 
   # sign_in()
-  sign_up()
+  # sign_up()
   # create_post()
