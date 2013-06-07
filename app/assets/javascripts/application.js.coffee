@@ -21,6 +21,7 @@ make_base_auth = (user, password) ->
   tok = user + ":" + password
   hash = $.base64.encode(tok)
   "Basic " + hash
+
 sign_in = ->
   $.post url("users/sign_in.json"),
     user:
@@ -29,6 +30,33 @@ sign_in = ->
       password: "smurfies"
   , (data) ->
     console.log data
+
+sign_up = ->
+  $.post url("users.json"),
+    user:
+      user_type: 'user'
+      venue: ''
+      name: 'teste'
+      email: "diegomr865@gmail.com"
+      password: "smurfies"
+      password_confirmation: "smurfies"
+      remember_me: 1
+  , (data) ->
+    console.log data
+
+sign_up = ->
+  $.post url("users.json"),
+    post:
+      user_type: 'user'
+      venue: ''
+      name: 'teste'
+      email: "diegomr865@gmail.com"
+      password: "smurfies"
+      password_confirmation: "smurfies"
+      remember_me: 1
+  , (data) ->
+    console.log data
+
 
 root_url = "http://localhost:3000/"
 $ ->
@@ -45,9 +73,9 @@ $ ->
         alert "Fazer login"
       400: (error) ->
         alert "Não passou na validação: "+ error.responseText
+      422: (error) ->
+        alert "Não passou na validação: "+ error.responseText
 
-  $.get url("users/sign_in.json"),
-    query: "a"
-  , (data) ->
-    console.log data
-
+# sign_in()
+# sign_up()
+# create_post()

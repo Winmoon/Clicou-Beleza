@@ -1,6 +1,6 @@
 = javascript_include_tag "sign_up"
 %h2 Sign up
-= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name, format: :json), remote: true) do |f|
   = f.error_notification
   .form-inputs
     = f.input :user_type, collection: User.user_type_list, as: :radio_buttons

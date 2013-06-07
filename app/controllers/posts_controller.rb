@@ -22,8 +22,10 @@ class PostsController < UserController
       if @post.save
         @post.photo.reprocess!
         format.html { redirect_to @post, notice: t('controllers.action.success.create') }
+        format.json { render json: @post, methods: :photo_urls }
       else
         format.html { render :new }
+        format.json { render json: @post.errors, status: 400 }
       end
     end
   end
@@ -35,8 +37,10 @@ class PostsController < UserController
       if @post.update_attributes(params[:post])
         @post.photo.reprocess!
         format.html { redirect_to @post, notice: t('controllers.action.success.update') }
+        format.json { render json: @post, methods: :photo_urls }
       else
         format.html { render :edit }
+        format.json { render json: @post.errors, status: 400 }
       end
     end
   end

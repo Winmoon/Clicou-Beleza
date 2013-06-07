@@ -50,5 +50,8 @@ class Post < ActiveRecord::Base
     client.venue(venue).name
   end
 
+  def photo_urls
+    { original: photo.url, cropped: photo.url(:cropped) }
+  end
 
 end

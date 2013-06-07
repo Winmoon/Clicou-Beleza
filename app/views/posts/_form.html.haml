@@ -1,6 +1,6 @@
 = stylesheet_link_tag "util/jquery.Jcrop.min"
 = javascript_include_tag "posts"
-= simple_form_for(@post, defaults: { input_html: { class: 'form-horizontal' } }) do |f|
+= simple_form_for(@post, format: :json, remote: true, defaults: { input_html: { class: 'form-horizontal' } }) do |f|
   = f.error_notification
   = f.input :categories, collection: Post.category_list, as: :check_boxes, checked: @post.categories
   = f.input :venue
