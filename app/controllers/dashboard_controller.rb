@@ -4,7 +4,15 @@ class DashboardController < UserController
   def index
     @posts = Post.paginate(page: params[:page], per_page: 15)
     @posts = @posts.where("categories like ?", "%#{params[:category]}%") if params[:category].present?
-    respond_with @posts
+    
+    @posts.each_with_index do |p, idx|
+      @posts[idx]["user_avatar"] = p.user.avatar.url(:medium)
+      @posts[idx]["user_name"] = p.user.name
+    end
+    
+    puts @posts[0].venue_info 
+    
+    respond_with @posts, methods: :photo_urls
   end
 
   def love
