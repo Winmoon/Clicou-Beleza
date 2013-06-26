@@ -27,15 +27,25 @@ class DashboardController < UserController
   end
 
   def comment
-    if @comment = Comment.create(params[:comment])
+    @comment = current_user.comments.new(params[:comment])
+    @comment.post_id = params[:id]
+
+    if @comment.save
       respond_with @comment
     else
-      respond_with @comment.errors, status: 400
+      respond_with @comment, status: 400
     end
   end
 
   def show
+
+    @comment = Comment.new
+
     @post = Post.find(params[:id])
-    respond_with @post
+
+    respond_with @post, include: {
+        loveds: { only: [:id, :created_at], include: { user: { only: [:id, :name], methods: :avatar_urls } } } ,
+        comments: { only: [:id, :created_at], include: { user: { only: [:id, :name], methods: :avatar_urls } } }
+    }
   end
 end

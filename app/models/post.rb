@@ -20,13 +20,6 @@ class Post < ActiveRecord::Base
     self.categories = categories.delete_if(&:blank?).join(',') if categories.is_a?(Array)
   end
 
-  def as_json(options={})
-    super(options.merge(include: {
-        loveds: {include: :user},
-        comments: {include: :user}}
-    ))
-  end
-
   def to_s
     description
   end

@@ -1,0 +1,18 @@
+= javascript_include_tag "posts"
+.content-body
+  .user
+    = link_to profile_path(@user) do
+      = image_tag @user.avatar.url(:thumb)
+      %strong= @user
+  %br
+  .pull-right
+    = link_to 'Follow', follow_profile_path(@user, format: :json), remote: true
+
+  - @user.post_list.each do |post_list|
+    .category.span4
+      %h4= link_to post_list[0][0], dashboard_index_path(category: post_list[0][1])
+      - post_list[1].each do |post|
+        = link_to dashboard_path(post) do
+          = image_tag post.photo.url(:cropped)
+
+

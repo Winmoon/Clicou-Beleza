@@ -14,3 +14,17 @@
       .comments
         = @post.comments.size
       .clearfix
+
+  - @post.comments.each do |comment|
+    = div_for comment, class: 'media' do
+      = link_to profile_path(comment.user), class: 'pull-left' do
+        = image_tag comment.user.avatar.url(:thumb)
+      .media-body
+        %h4.media-heading= comment.user
+
+  .clearfix
+  = simple_form_for(@comment, url: comment_dashboard_path(@post.id, format: :json), remote: true, defaults: { input_html: { class: 'form-horizontal' } }) do |f|
+    = f.error_notification
+    = f.input :post_id, as: :hidden, value: @post.id
+    = f.input :comment, as: :text
+    = f.submit :submit
