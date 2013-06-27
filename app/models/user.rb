@@ -70,4 +70,8 @@ class User < ActiveRecord::Base
       [category, posts] if posts.any?
     end.reject(&:nil?)
   end
+
+  def following?(user_id)
+    user_id != self.id && followings.find_by_following_id(user_id).present?
+  end
 end

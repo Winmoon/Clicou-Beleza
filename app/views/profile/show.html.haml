@@ -5,8 +5,17 @@
       = image_tag @user.avatar.url(:thumb)
       %strong= @user
   %br
-  .pull-right
-    = link_to 'Follow', follow_profile_path(@user, format: :json), remote: true
+  - if user_signed_in?
+    - if @is_following
+      = link_to "Unfollow", following_path(@user.id), method: :delete, format: :json, remote: true, class: 'btn'
+    - else
+      .pull-right
+        %h4 Follow
+        = simple_form_for(@following, format: :json, remote: true, defaults: { input_html: { class: 'form-horizontal' } }) do |f|
+          = f.error_notification
+          = f.input :following_id, as: :hidden, input_html: { value: @user.id }
+          = f.input :categories, collection: Post.category_list, as: :check_boxes, checked: @following.categories
+          = f.submit :submit
 
   - @user.post_list.each do |post_list|
     .category.span4

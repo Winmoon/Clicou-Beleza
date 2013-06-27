@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130625150911) do
+ActiveRecord::Schema.define(:version => 20130627134115) do
 
   create_table "comments", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20130625150911) do
     t.datetime "deleted_at"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.string   "categories"
   end
 
   add_index "followings", ["following_id"], :name => "index_followings_on_following_id"

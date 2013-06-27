@@ -7,18 +7,13 @@ class ProfileController < ApplicationController
   end
 
   def show
-    respond_with @user.as_json(only: [:id, :name, :following_count, :followers_count], methods: [:avatar_urls, :post_list])
+    @following = Following.new
+
+    @is_following = current_user.following?(@user.id) if user_signed_in?
+
+    r = {is_following: @is_following, user: @user.as_json(only: [:id, :name, :following_count, :followers_count], methods: [:avatar_urls, :post_list])}
+    respond_with r
   end
 
-  def follow
-    @following = current_user.followings.find_or_initialize_by_following_id(params[:id])
-    @following.save
-    respond_with 'following'
-  end
 
-  def unfollow
-    @following = current_user.followings.find_by_following_id(params[:id])
-    @following.destroy
-    respond_with 'unfollowed'
-  end
 end

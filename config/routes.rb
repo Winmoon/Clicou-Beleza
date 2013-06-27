@@ -5,7 +5,7 @@ ClicouBeleza::Application.routes.draw do
     resources :venues
     resources :posts
     resources :profile, only: [:show] do
-      get 'follow', on: :member
+      post 'follow', on: :member
       get 'unfollow', on: :member
       get 'posts', on: :member
     end
@@ -18,6 +18,7 @@ ClicouBeleza::Application.routes.draw do
 
   root :to => 'home#index'
 
+  resources :followings
   resources :comments
   resources :loveds
   resources :home, only: :index
