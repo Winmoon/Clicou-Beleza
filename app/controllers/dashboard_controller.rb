@@ -1,5 +1,5 @@
 class DashboardController < UserController
-  skip_before_filter :authenticate_user!, only: :index
+  skip_before_filter :authenticate_user!, only: [:index, :show]
   respond_to :html, :json
   def index
     @posts = Post.paginate(page: params[:page], per_page: 15)
