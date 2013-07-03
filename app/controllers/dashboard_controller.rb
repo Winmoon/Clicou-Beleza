@@ -10,8 +10,6 @@ class DashboardController < UserController
       @posts[idx]["user_name"] = p.user.name
     end
     
-    puts @posts[0].venue_info 
-    
     respond_with @posts, methods: :photo_urls
   end
 
@@ -42,8 +40,11 @@ class DashboardController < UserController
     @comment = Comment.new
 
     @post = Post.find(params[:id])
-
-    respond_with @post, include: {
+    
+    @post[:user_avatar] = @post.user.avatar.url(:medium)
+    @post[:user_name] = @post.user.name
+    
+    respond_with @post, methods: :photo_urls, include: {
         loveds: { only: [:id, :created_at], include: { user: { only: [:id, :name], methods: :avatar_urls } } } ,
         comments: { only: [:id, :created_at], include: { user: { only: [:id, :name], methods: :avatar_urls } } }
     }
