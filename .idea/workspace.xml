@@ -1,22 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" name="Default" comment="Adiciona o perfil do usuário, e inicia o processo de follow">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/followings_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/profile_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/profile_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/profile/show.html.haml" afterPath="$PROJECT_DIR$/app/views/profile/show.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
+    <list default="true" id="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dashboard_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/dashboard_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Clicou-Beleza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1372343031266" ignored="false" />
+    <file path="/Dummy.txt" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1372871584779" ignored="false" />
     <file path="$PROJECT_DIR$/../WL-Clicou-Pizza/Gemfile" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1370301888128" ignored="false" />
     <file path="$PROJECT_DIR$/../WL-Clicou-Pizza/app/controllers/sites_controller.rb" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1370302124088" ignored="false" />
-    <file path="/dashboard_controller.rb" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1372263445669" ignored="false" />
+    <file path="/dashboard_controller.rb" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1372871610235" ignored="false" />
     <file path="/index.html.haml" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1372261258937" ignored="false" />
     <file path="/application.html.haml" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1370375454233" ignored="false" />
     <file path="/routes.rb" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1372339809039" ignored="false" />
@@ -68,10 +62,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.haml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="show.html.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/profile/show.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="94" selection-start="302" selection-end="302" vertical-scroll-proportion="0.2688928">
+            <state line="3" column="93" selection-start="91" selection-end="91" vertical-scroll-proportion="-1.9615384">
               <folding />
             </state>
           </provider>
@@ -86,10 +80,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="dashboard_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/dashboard_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="143" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0">
+            <state line="1" column="63" selection-start="106" selection-end="106" vertical-scroll-proportion="-0.04120267">
               <folding />
             </state>
           </provider>
@@ -160,7 +154,6 @@
         <option value="$PROJECT_DIR$/db/migrate/20130625150911_add_counters_to_user.rb" />
         <option value="$PROJECT_DIR$/app/views/dashboard/index.html.haml" />
         <option value="$PROJECT_DIR$/app/models/comment.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/dashboard_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/dashboard/show.html.haml" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/followings_controller.rb" />
@@ -169,6 +162,7 @@
         <option value="$PROJECT_DIR$/app/controllers/profile_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js.coffee" />
         <option value="$PROJECT_DIR$/app/views/profile/show.html.haml" />
+        <option value="$PROJECT_DIR$/app/controllers/dashboard_controller.rb" />
       </list>
     </option>
   </component>
@@ -211,8 +205,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
       <pane id="Scope" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -230,7 +224,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Clicou-Pizza" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
@@ -483,11 +477,11 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="1" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="2" class="java.lang.String" itemvalue="Rails.Production: Clicou-Beleza" />
-      <item index="3" class="java.lang.String" itemvalue="Rails.Development: Clicou-Beleza" />
-      <item index="4" class="java.lang.String" itemvalue="Rake.db:migrate" />
+      <item index="0" class="java.lang.String" itemvalue="Rake.db:migrate" />
+      <item index="1" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="2" class="java.lang.String" itemvalue="Rake.spec" />
+      <item index="3" class="java.lang.String" itemvalue="Rails.Production: Clicou-Beleza" />
+      <item index="4" class="java.lang.String" itemvalue="Rails.Development: Clicou-Beleza" />
     </list>
     <recent_temporary>
       <list size="1">
@@ -527,22 +521,26 @@
       <created>1372268978728</created>
       <updated>1372268978729</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Adiciona o perfil do usuário, e inicia o processo de follow">
+      <created>1372343040526</created>
+      <updated>1372343040526</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2854856" sideWeight="0.6720779" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.291889" sideWeight="0.67099565" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32792208" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32792208" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -619,30 +617,22 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/controllers/posts_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="6" selection-start="848" selection-end="889" vertical-scroll-proportion="0.6857143">
-          <folding />
-        </state>
+        <state line="36" column="6" selection-start="848" selection-end="889" vertical-scroll-proportion="0.6857143" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/posts/_form.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="110" selection-start="79" selection-end="321" vertical-scroll-proportion="0.11950791">
-          <folding />
-        </state>
+        <state line="4" column="110" selection-start="79" selection-end="321" vertical-scroll-proportion="0.11950791" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20130627134115_add_categories_to_following.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="51" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="5" column="51" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/loved.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="2" selection-start="142" selection-end="196" vertical-scroll-proportion="0.14285715">
-          <folding />
-        </state>
+        <state line="5" column="2" selection-start="142" selection-end="196" vertical-scroll-proportion="0.14285715" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
@@ -654,9 +644,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="34" selection-start="406" selection-end="421" vertical-scroll-proportion="0.5377856">
-          <folding />
-        </state>
+        <state line="18" column="34" selection-start="406" selection-end="421" vertical-scroll-proportion="0.5377856" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/post.rb">
@@ -675,18 +663,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/posts/index.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="124" selection-start="1290" selection-end="1398" vertical-scroll-proportion="0.7012302">
-          <folding>
-            <element signature="e#1313#1333#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="36" column="124" selection-start="1290" selection-end="1398" vertical-scroll-proportion="0.7012302" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/posts/new.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="220" selection-end="220" vertical-scroll-proportion="0.17926186">
-          <folding />
-        </state>
+        <state line="6" column="0" selection-start="220" selection-end="220" vertical-scroll-proportion="0.17926186" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/followings_controller.rb">
@@ -712,21 +694,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="4" selection-start="2051" selection-end="2051" vertical-scroll-proportion="0.7714286">
+        <state line="78" column="4" selection-start="2051" selection-end="2051" vertical-scroll-proportion="0.7714286" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/profile/show.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="93" selection-start="91" selection-end="91" vertical-scroll-proportion="-1.9615384">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/dashboard_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="143" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/profile/show.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="94" selection-start="302" selection-end="302" vertical-scroll-proportion="0.2688928">
+        <state line="1" column="63" selection-start="106" selection-end="106" vertical-scroll-proportion="-0.04120267">
           <folding />
         </state>
       </provider>
