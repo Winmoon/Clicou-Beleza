@@ -46,7 +46,7 @@ class DashboardController < UserController
     
     respond_with @post, methods: :photo_urls, include: {
         loveds: { only: [:id, :created_at], include: { user: { only: [:id, :name], methods: :avatar_urls } } } ,
-        comments: { only: [:id, :created_at], include: { user: { only: [:id, :name], methods: :avatar_urls } } }
+        comments: { only: [:id, :created_at, :comment], include: { user: { only: [:id, :name], methods: :avatar_urls } } }
     }
   end
 end
