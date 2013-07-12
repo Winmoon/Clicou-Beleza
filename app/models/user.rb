@@ -67,7 +67,7 @@ class User < ActiveRecord::Base
   def post_list
     Post.category_list.collect do |category|
       posts = Post.where("categories like ?", "%#{category[1]}%").order("RANDOM()").limit('4')
-      [category, posts] if posts.any?
+      {category: posts} if posts.any?
     end.reject(&:nil?)
   end
 
