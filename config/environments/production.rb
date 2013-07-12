@@ -74,4 +74,6 @@ ClicouBeleza::Application.configure do
       }
   }
 
+  config.assets.precompile = ['*']
+
 end
