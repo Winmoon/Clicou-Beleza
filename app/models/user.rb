@@ -66,8 +66,8 @@ class User < ActiveRecord::Base
 
   def post_list
     Post.category_list.collect do |category|
-      posts = Post.where("categories like ?", "%#{category[1]}%").order("RANDOM()").limit('4')
-      {category: posts} if posts.any?
+      posts = Post.where("categories like ?", "%#{category[1]}%").order("RANDOM()").limit('4').collect{ |post| post.as_json(methods: [:photo_urls]) }
+      [category, posts] if posts.any?
     end.reject(&:nil?)
   end
 

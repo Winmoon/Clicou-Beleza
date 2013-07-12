@@ -22,6 +22,6 @@
       %h4= link_to post_list[0][0], dashboard_index_path(category: post_list[0][1])
       - post_list[1].each do |post|
         = link_to dashboard_path(post) do
-          = image_tag post.photo.url(:cropped)
+          = image_tag post[:photo_urls][:cropped]
 
 
