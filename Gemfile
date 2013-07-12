@@ -31,8 +31,7 @@ gem "foursquare2", "~> 1.9.7"
 gem "will_paginate", "~> 3.0.3"
 gem "will-paginate-i18n", "~> 0.0.9"
 
-gem "aws-sdk", "1.9.1"
-gem "aws-s3", "~> 0.6.3"
+gem "aws-sdk", "~> 1.12.0"
 
 gem "delayed_job_active_record"
 
