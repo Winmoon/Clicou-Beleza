@@ -18,9 +18,10 @@
           = f.submit :submit
 
   - @user.post_list.each do |post_list|
+    = puts post_list
     .category.span4
-      %h4= link_to post_list[0][0], dashboard_index_path(category: post_list[0][1])
-      - post_list[1].each do |post|
+      %h4= link_to post_list[:category_name][0], dashboard_index_path(category: post_list[:category_name][1])
+      - post_list[:category_posts].each do |post|
         = link_to dashboard_path(post) do
           = image_tag post[:photo_urls][:cropped]
 
