@@ -46,8 +46,9 @@ class Post < ActiveRecord::Base
   end
 
   def venue_info
-    client = Foursquare2::Client.new(:client_id => '3JLPOEMCQ05BHK3LAOL0ANTXT1KKYHXDKKAFAPTKR3IAD2E3', :client_secret => 'QSYLJVS0OCDFNTKZ1DZ2IL1BQVKTCCYQ1LVRIPZORSLF503Z')
-    client.venue(venue).name
+    # client = Foursquare2::Client.new(:client_id => '3JLPOEMCQ05BHK3LAOL0ANTXT1KKYHXDKKAFAPTKR3IAD2E3', :client_secret => 'QSYLJVS0OCDFNTKZ1DZ2IL1BQVKTCCYQ1LVRIPZORSLF503Z')
+    # client.venue(venue).name
+    'Buscar o nome por javascript'
   end
 
   def photo_urls
