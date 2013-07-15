@@ -2,31 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/newrelic.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Clicou-Beleza.iml" afterPath="$PROJECT_DIR$/.idea/Clicou-Beleza.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/comment.rb" afterPath="$PROJECT_DIR$/app/models/comment.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/dashboard.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/dashboard.js.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dashboard_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/dashboard_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/app/pt-BR.yml" afterPath="$PROJECT_DIR$/config/locales/app/pt-BR.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboard/show.html.haml" afterPath="$PROJECT_DIR$/app/views/dashboard/show.html.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Clicou-Beleza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1373657618144" ignored="false" />
+    <file path="/Dummy.txt" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1373896016070" ignored="false" />
     <file path="$PROJECT_DIR$/../WL-Clicou-Pizza/Gemfile" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1370301888128" ignored="false" />
     <file path="$PROJECT_DIR$/../WL-Clicou-Pizza/app/controllers/sites_controller.rb" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1370302124088" ignored="false" />
-    <file path="/dashboard_controller.rb" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1372871610235" ignored="false" />
-    <file path="/index.html.haml" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1372261258937" ignored="false" />
+    <file path="/dashboard_controller.rb" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1373897096544" ignored="false" />
+    <file path="/index.html.haml" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1373896705773" ignored="false" />
     <file path="/application.html.haml" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1370375454233" ignored="false" />
-    <file path="/routes.rb" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1372339809039" ignored="false" />
+    <file path="/routes.rb" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1373896637245" ignored="false" />
     <file path="/post.rb" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1372167978525" ignored="false" />
     <file path="/application.sass" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1370378266359" ignored="false" />
     <file path="/loved.rb" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1370391232960" ignored="false" />
-    <file path="/dashboard.js.coffee" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1370391007734" ignored="false" />
+    <file path="/dashboard.js.coffee" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1373897175742" ignored="false" />
     <file path="/application.js.coffee" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1372342634301" ignored="false" />
     <file path="/user.rb" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1373381305871" ignored="false" />
     <file path="/profile_controller.rb" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1372342577219" ignored="false" />
-    <file path="/show.html.haml" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1373381492149" ignored="false" />
+    <file path="/show.html.haml" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1373897632289" ignored="false" />
     <file path="/20130625150910_create_followings.rb" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1372173042730" ignored="false" />
     <file path="/_profile_header.html.haml" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1372178808883" ignored="false" />
     <file path="/posts.html.haml" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1372182362822" ignored="false" />
@@ -36,10 +40,11 @@
     <file path="/20130430130741_add_deleted_at_to_tables.rb" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1372192859399" ignored="false" />
     <file path="$PROJECT_DIR$/../Clicou-Pizza/app/controllers/users/sessions_controller.rb" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1372260502953" ignored="false" />
     <file path="/a.dummy" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1373657751188" ignored="false" />
-    <file path="/comment.rb" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1372262387299" ignored="false" />
+    <file path="/comment.rb" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1373898154654" ignored="false" />
     <file path="/followings_controller.rb" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1372340037907" ignored="false" />
     <file path="/following.rb" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1372340946847" ignored="false" />
     <file path="/production.rb" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1373658439984" ignored="false" />
+    <file path="/pt-BR.yml" changelist="2e2b4ec2-e2c8-4ff5-8b97-6c09e0519e4d" time="1373898123201" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,19 +64,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="application.js.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js.coffee">
+      <file leaf-file-name="show.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/dashboard/show.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="26" selection-start="661" selection-end="661" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="production.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="45" selection-start="3187" selection-end="3200" vertical-scroll-proportion="0.74285716">
+            <state line="15" column="15" selection-start="462" selection-end="462" vertical-scroll-proportion="-9.807693">
               <folding />
             </state>
           </provider>
@@ -80,7 +76,36 @@
       <file leaf-file-name="comment.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/comment.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="2" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
+            <state line="16" column="57" selection-start="487" selection-end="487" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#424#467#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="18" selection-start="960" selection-end="960" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="newrelic.yml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/newrelic.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="47" selection-start="728" selection-end="728" vertical-scroll-proportion="-5.114286">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pt-BR.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/locales/app/pt-BR.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="24" selection-start="1190" selection-end="1208" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -108,22 +133,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/profile/_profile_header.html.haml" />
-        <option value="$PROJECT_DIR$/app/models/post.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130625150911_add_counters_to_user.rb" />
-        <option value="$PROJECT_DIR$/app/views/dashboard/index.html.haml" />
-        <option value="$PROJECT_DIR$/app/views/dashboard/show.html.haml" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/followings_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/following.rb" />
         <option value="$PROJECT_DIR$/app/controllers/profile_controller.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js.coffee" />
-        <option value="$PROJECT_DIR$/app/controllers/dashboard_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/views/profile/show.html.haml" />
+        <option value="$PROJECT_DIR$/config/environments/production.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js.coffee" />
+        <option value="$PROJECT_DIR$/app/views/dashboard/index.html.haml" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/dashboard_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/dashboard.js.coffee" />
+        <option value="$PROJECT_DIR$/app/views/dashboard/show.html.haml" />
+        <option value="$PROJECT_DIR$/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/config/locales/app/pt-BR.yml" />
         <option value="$PROJECT_DIR$/app/models/comment.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/config/environments/production.rb" />
       </list>
     </option>
   </component>
@@ -166,6 +191,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -184,33 +210,60 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Clicou-Beleza" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Clicou-Beleza" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Clicou-Beleza" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Clicou-Beleza" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="RailsProjectView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="dynamic.classpath" value="false" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Diego\winmoon\git\Clicou-Beleza\config" />
       <recent name="C:\Users\Diego\winmoon\git\Clicou-Beleza\app\controllers" />
       <recent name="C:\Users\Diego\winmoon\git\Clicou-Beleza\db\migrate" />
       <recent name="C:\Users\Diego\winmoon\git\Clicou-Beleza\app\views\profile" />
       <recent name="C:\Users\Diego\winmoon\git\Clicou-Beleza\app\views" />
-      <recent name="C:\Users\Diego\winmoon\git\Clicou-Beleza\app\views\dashboard" />
     </key>
   </component>
   <component name="RunManager" selected="Rails.Development: Clicou-Beleza">
@@ -500,7 +553,11 @@
       <created>1373382047199</created>
       <updated>1373382047199</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Adiciona o metodo photo_urls no retorno do método post_list">
+      <created>1373658544473</created>
+      <updated>1373658544473</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -525,14 +582,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31216648" sideWeight="0.6720779" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32337245" sideWeight="0.6720779" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -541,6 +597,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
@@ -611,114 +668,108 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/following.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/profile/show.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="25" selection-start="192" selection-end="192" vertical-scroll-proportion="0.14309764">
-          <folding />
-        </state>
+        <state line="27" column="106" selection-start="1030" selection-end="1030" vertical-scroll-proportion="0.5263761" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/post.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/user_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="16" selection-start="1614" selection-end="1624" vertical-scroll-proportion="0.8">
-          <folding />
-        </state>
+        <state line="2" column="47" selection-start="83" selection-end="128" vertical-scroll-proportion="0.037861917" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/application.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/followings_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="4" selection-start="2959" selection-end="2959" vertical-scroll-proportion="0.8449259">
-          <folding />
-        </state>
+        <state line="10" column="76" selection-start="218" selection-end="275" vertical-scroll-proportion="0.18930958" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/profile_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="139" selection-start="447" selection-end="447" vertical-scroll-proportion="0.24610245" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dashboard.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="92" selection-start="133" selection-end="133" vertical-scroll-proportion="0.11630559">
+        <state line="4" column="13" selection-start="102" selection-end="102" vertical-scroll-proportion="0.114285715">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/dashboard/index.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="30" selection-start="30" selection-end="30" vertical-scroll-proportion="-0.0">
+        <state line="17" column="29" selection-start="577" selection-end="577" vertical-scroll-proportion="0.5079086">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/dashboard_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="34" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="23" selection-start="546" selection-end="546" vertical-scroll-proportion="0.26169264">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/profile/show.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="106" selection-start="1030" selection-end="1030" vertical-scroll-proportion="0.5263761">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="15" selection-start="2101" selection-end="2110" vertical-scroll-proportion="0.6781737">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/user_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="47" selection-start="83" selection-end="128" vertical-scroll-proportion="0.037861917">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/followings_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="76" selection-start="218" selection-end="275" vertical-scroll-proportion="0.18930958">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/profile_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="139" selection-start="447" selection-end="447" vertical-scroll-proportion="0.24610245">
+        <state line="23" column="22" selection-start="778" selection-end="778" vertical-scroll-proportion="0.6571429">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="26" selection-start="661" selection-end="661" vertical-scroll-proportion="0.0">
+        <state line="15" column="39" selection-start="660" selection-end="660" vertical-scroll-proportion="0.42857143">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="61" selection-start="346" selection-end="346" vertical-scroll-proportion="0.45210084">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/comment.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="2" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
+        <state line="14" column="17" selection-start="463" selection-end="463" vertical-scroll-proportion="0.4">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="45" selection-start="3187" selection-end="3200" vertical-scroll-proportion="0.74285716">
+        <state line="86" column="26" selection-start="3181" selection-end="3181" vertical-scroll-proportion="0.62857145">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="31" selection-start="2397" selection-end="2397" vertical-scroll-proportion="1.507563">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/locales/app/pt-BR.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="24" selection-start="1190" selection-end="1208" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/show.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="15" selection-start="462" selection-end="462" vertical-scroll-proportion="-9.807693">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/comment.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="57" selection-start="487" selection-end="487" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#424#467#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="18" selection-start="960" selection-end="960" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/newrelic.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="47" selection-start="728" selection-end="728" vertical-scroll-proportion="-5.114286">
           <folding />
         </state>
       </provider>

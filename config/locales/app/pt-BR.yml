@@ -33,6 +33,9 @@ pt-BR:
     cancel_account: Cancelar minha conta
     unhappy: Desejo cancelar minha conta agora ->
     cancel_account_submit: Cancele minha conta.
+  errors:
+    comment:
+      duplicated_message: Esta mensagem já foi enviada recentemente
 
   controllers:
     action:

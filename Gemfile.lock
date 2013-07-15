@@ -155,6 +155,7 @@ GEM
     multipart-post (1.2.0)
     net-http-digest_auth (1.3)
     net-http-persistent (2.8)
+    newrelic_rpm (3.6.0.83)
     nokogiri (1.5.10)
     nokogiri (1.5.10-x86-mingw32)
     ntlm-http (0.1.1)
@@ -272,6 +273,7 @@ DEPENDENCIES
   i18n-generators (~> 1.1.3)
   jquery-rails
   metamagic (~> 2.0.5)
+  newrelic_rpm
   omniauth-facebook (= 1.4.0)
   paperclip (~> 3.4.2)
   pg

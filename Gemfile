@@ -50,3 +50,5 @@ gem "debugger"
 
 gem "certified"
 gem "addressable"
+
+gem "newrelic_rpm"

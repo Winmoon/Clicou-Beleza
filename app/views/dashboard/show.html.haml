@@ -20,7 +20,8 @@
       = link_to profile_path(comment.user), class: 'pull-left' do
         = image_tag comment.user.avatar.url(:thumb)
       .media-body
-        %h4.media-heading= comment.user
+        %h5.media-heading= comment.user
+        %span= comment.comment
 
   .clearfix
   = simple_form_for(@comment, url: comment_dashboard_path(@post.id, format: :json), remote: true, defaults: { input_html: { class: 'form-horizontal' } }) do |f|
