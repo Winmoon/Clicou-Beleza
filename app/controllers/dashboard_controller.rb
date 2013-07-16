@@ -14,13 +14,17 @@ class DashboardController < UserController
   end
 
   def love
-    @loved = current_user.loveds.new()
-    @loved.post_id = params[:id]
-
-    if @loved.save
-      respond_with @loved
+    @loved = current_user.loveds.find_or_initialize_by_post_id(params[:id])
+    if @loved.persisted?
+      @loved.destroy
+      respond_with ['unloved']
     else
-      respond_with @loved.errors, status: 400
+      @loved.post_id = params[:id]
+      if @loved.save
+        respond_with ['loved']
+      else
+        respond_with @loved.errors, status: 400
+      end
     end
   end
 
