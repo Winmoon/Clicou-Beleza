@@ -37,6 +37,8 @@ class User < ActiveRecord::Base
 
   has_many :posts
   has_many :loveds
+  has_many :comments
+  has_many :followings
 
   validates :name, presence: true, length: { maximum: 255 }
 
@@ -45,7 +47,6 @@ class User < ActiveRecord::Base
   validates :user_type, presence: true
 
   validates :venue, presence: true, if: :is_salon?
-
 
   def is_salon?
     user_type.to_s == 'salon'
@@ -59,4 +60,18 @@ class User < ActiveRecord::Base
     [:user, :salon].collect{ |i| [I18n.t("activerecord.attributes.user.user_type_list.#{i}"), i]}
   end
 
+  def avatar_urls
+    { original: avatar.url, medium: avatar.url(:medium), thumb: avatar.url(:thumb) }
+  end
+
+  def post_list
+    Post.category_list.collect do |category|
+      posts = Post.where("categories like ?", "%#{category[1]}%").order("RANDOM()").limit('4').collect{ |post| post.as_json(methods: [:photo_urls]) }
+      {category_name: category, category_posts: posts} if posts.any?
+    end.reject(&:nil?)
+  end
+
+  def following?(user_id)
+    user_id != self.id && followings.find_by_following_id(user_id).present?
+  end
 end

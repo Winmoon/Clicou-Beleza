@@ -1,0 +1,28 @@
+= javascript_include_tag "posts"
+.content-body
+  .user
+    = link_to profile_path(@user) do
+      = image_tag @user.avatar.url(:thumb)
+      %strong= @user
+  %br
+  - if user_signed_in?
+    - if @is_following
+      = link_to "Unfollow", following_path(@user.id), method: :delete, format: :json, remote: true, class: 'btn'
+    - else
+      .pull-right
+        %h4 Follow
+        = simple_form_for(@following, format: :json, remote: true, defaults: { input_html: { class: 'form-horizontal' } }) do |f|
+          = f.error_notification
+          = f.input :following_id, as: :hidden, input_html: { value: @user.id }
+          = f.input :categories, collection: Post.category_list, as: :check_boxes, checked: @following.categories
+          = f.submit :submit
+
+  - @user.post_list.each do |post_list|
+    = puts post_list
+    .category.span4
+      %h4= link_to post_list[:category_name][0], dashboard_index_path(category: post_list[:category_name][1])
+      - post_list[:category_posts].each do |post|
+        = link_to dashboard_path(post) do
+          = image_tag post[:photo_urls][:cropped]
+
+

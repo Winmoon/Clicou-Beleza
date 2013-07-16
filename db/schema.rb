@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130604141615) do
+ActiveRecord::Schema.define(:version => 20130627134115) do
 
   create_table "comments", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -23,6 +23,18 @@ ActiveRecord::Schema.define(:version => 20130604141615) do
 
   add_index "comments", ["post_id"], :name => "index_comments_on_post_id"
   add_index "comments", ["user_id"], :name => "index_comments_on_user_id"
+
+  create_table "followings", :force => true do |t|
+    t.integer  "user_id",      :null => false
+    t.integer  "following_id", :null => false
+    t.datetime "deleted_at"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.string   "categories"
+  end
+
+  add_index "followings", ["following_id"], :name => "index_followings_on_following_id"
+  add_index "followings", ["user_id"], :name => "index_followings_on_user_id"
 
   create_table "loveds", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -53,25 +65,27 @@ ActiveRecord::Schema.define(:version => 20130604141615) do
   add_index "posts", ["user_id"], :name => "index_posts_on_user_id"
 
   create_table "users", :force => true do |t|
-    t.string   "email",                  :default => "", :null => false
-    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "email",                                 :null => false
+    t.string   "encrypted_password",                    :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          :default => 0
+    t.integer  "sign_in_count"
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                             :null => false
-    t.datetime "updated_at",                             :null => false
-    t.string   "name",                                   :null => false
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
+    t.string   "name",                                  :null => false
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.string   "user_type"
     t.string   "venue"
+    t.integer  "following_count",        :default => 0
+    t.integer  "followers_count",        :default => 0
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

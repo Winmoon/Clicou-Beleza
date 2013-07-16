@@ -3,9 +3,12 @@
   - @posts.each do |post|
     = div_for post do
       .user
-        = image_tag post.user.avatar.url(:thumb)
-        %strong= post.user
-      .photo= image_tag post.photo.url(:cropped)
+        = link_to profile_path(post.user) do
+          = image_tag post.user.avatar.url(:thumb)
+          %strong= post.user
+      .photo
+        = link_to dashboard_path(post) do
+          = image_tag post.photo.url(:cropped)
       .description= post.description
       .options
         .venue

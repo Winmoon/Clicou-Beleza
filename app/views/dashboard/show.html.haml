@@ -1,17 +1,31 @@
 = javascript_include_tag "posts"
 .content-body.dashboard
-  - @posts.each do |post|
-    = div_for post do
-      .user
-        = image_tag post.user.avatar.url(:thumb)
-        %strong= post.user
-      .photo= image_tag post.photo.url(:cropped)
-      .description= post.description
-      .options
-        .venue
-          %strong= post.venue_info
-        .loveds
-          = link_to post.loveds.size, love_dashboard_path(post.id), remote: true
-        .comments
-          = post.comments.size
-        .clearfix
+  = div_for @post do
+    .user
+      = image_tag @post.user.avatar.url(:thumb)
+      %strong= @post.user
+    .photo= image_tag @post.photo.url(:cropped)
+    .description= @post.description
+    .options
+      .venue
+        %strong= @post.venue_info
+      .loveds
+        = link_to @post.loveds.size, love_dashboard_path(@post.id), remote: true
+      .comments
+        = @post.comments.size
+      .clearfix
+
+  - @post.comments.each do |comment|
+    = div_for comment, class: 'media' do
+      = link_to profile_path(comment.user), class: 'pull-left' do
+        = image_tag comment.user.avatar.url(:thumb)
+      .media-body
+        %h5.media-heading= comment.user
+        %span= comment.comment
+
+  .clearfix
+  = simple_form_for(@comment, url: comment_dashboard_path(@post.id, format: :json), remote: true, defaults: { input_html: { class: 'form-horizontal' } }) do |f|
+    = f.error_notification
+    = f.input :post_id, as: :hidden, value: @post.id
+    = f.input :comment, as: :text
+    = f.submit :submit

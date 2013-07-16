@@ -65,13 +65,29 @@ ClicouBeleza::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
+  ActionMailer::Base.smtp_settings = {
+      :address        => 'smtp.sendgrid.net',
+      :port           => '587',
+      :authentication => :plain,
+      :user_name      => ENV['SENDGRID_USERNAME'],
+      :password       => ENV['SENDGRID_PASSWORD'],
+      :domain         => 'heroku.com'
+  }
+
+  ActionMailer::Base.delivery_method ||= :smtp
+
+  config.action_mailer.default_url_options = { :host => 'www.clicoubeleza.com' }
+
   config.paperclip_defaults = {
       :storage => :s3,
       :s3_credentials => {
           :bucket => ENV['AWS_BUCKET'],
           :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-          :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+          :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'],
+          :s3_host_name => ENV['AWS_HOST_NAME']
       }
   }
+
+  config.assets.precompile = ['*']
 
 end

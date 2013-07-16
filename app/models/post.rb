@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
   has_many :loveds
   has_many :comments
 
-  has_attached_file :photo, :styles => { :cropped => "5000x5000>" }, default_url: "/images/:style/missing.png", :processors => [:cropper]
+  has_attached_file :photo, :styles => { :cropped => "5000x5000>", :thumb => "95x95>" }, default_url: "/images/:style/missing.png", :processors => [:cropper]
 
   attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
 
@@ -46,12 +46,13 @@ class Post < ActiveRecord::Base
   end
 
   def venue_info
-    client = Foursquare2::Client.new(:client_id => '3JLPOEMCQ05BHK3LAOL0ANTXT1KKYHXDKKAFAPTKR3IAD2E3', :client_secret => 'QSYLJVS0OCDFNTKZ1DZ2IL1BQVKTCCYQ1LVRIPZORSLF503Z')
-    client.venue(venue).name
+    # client = Foursquare2::Client.new(:client_id => '3JLPOEMCQ05BHK3LAOL0ANTXT1KKYHXDKKAFAPTKR3IAD2E3', :client_secret => 'QSYLJVS0OCDFNTKZ1DZ2IL1BQVKTCCYQ1LVRIPZORSLF503Z')
+    # client.venue(venue).name
+    'Buscar o nome por javascript'
   end
 
   def photo_urls
-    { original: photo.url, cropped: photo.url(:cropped) }
+    { original: photo.url, cropped: photo.url(:cropped), thumb: photo.url(:thumb) }
   end
 
 end
