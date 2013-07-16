@@ -2,7 +2,7 @@ class DashboardController < UserController
   skip_before_filter :authenticate_user!, only: [:index, :show]
   respond_to :html, :json
   def index
-    @posts = Post.paginate(page: params[:page], per_page: 15)
+    @posts = Post.paginate(page: params[:page], per_page: 15).order("created_at desc")
     @posts = @posts.where("categories like ?", "%#{params[:category]}%") if params[:category].present?
     
     @posts.each_with_index do |p, idx|
