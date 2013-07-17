@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130627134115) do
+ActiveRecord::Schema.define(:version => 20130717143538) do
 
   create_table "comments", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -84,7 +84,7 @@ ActiveRecord::Schema.define(:version => 20130627134115) do
     t.datetime "avatar_updated_at"
     t.string   "user_type"
     t.string   "venue"
-    t.integer  "following_count",        :default => 0
+    t.integer  "followings_count",       :default => 0
     t.integer  "followers_count",        :default => 0
   end
 
