@@ -40,6 +40,7 @@ class User < ActiveRecord::Base
   has_many :comments
   has_many :followings, :class_name => 'Following', :foreign_key => :user_id
   has_many :followers, :class_name => 'Following', :foreign_key => :following_id
+  has_many :loved_posts, through: :loveds, source: :post
 
   validates :name, presence: true, length: { maximum: 255 }
 
@@ -68,6 +69,13 @@ class User < ActiveRecord::Base
   def post_list
     Post.category_list.collect do |category|
       posts = self.posts.where("categories like ?", "%#{category[1]}%").order("RANDOM()").limit('4').collect{ |post| post.as_json(methods: [:photo_urls]) }
+      {category_name: category, category_posts: posts} if posts.any?
+    end.reject(&:nil?)
+  end
+
+  def loved_post_list
+    Post.category_list.collect do |category|
+      posts = self.loved_posts.where("categories like ?", "%#{category[1]}%").order("RANDOM()").limit('4').collect{ |post| post.as_json(methods: [:photo_urls]) }
       {category_name: category, category_posts: posts} if posts.any?
     end.reject(&:nil?)
   end

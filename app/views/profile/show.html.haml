@@ -26,7 +26,18 @@
   - @user.post_list.each do |post_list|
     = puts post_list
     .category.span4
-      %h4= link_to post_list[:category_name][0], dashboard_index_path(category: post_list[:category_name][1])
+      %h4= link_to post_list[:category_name][0], dashboard_index_path(category: post_list[:category_name][1], source: 'user')
+      - post_list[:category_posts].each do |post|
+        = link_to dashboard_path(post) do
+          = image_tag post[:photo_urls][:cropped]
+
+  .clearfix
+  %hr
+  %h5 Amei
+  - @user.loved_post_list.each do |post_list|
+    = puts post_list
+    .category.span4
+      %h4= link_to post_list[:category_name][0], dashboard_index_path(category: post_list[:category_name][1], source: 'loved')
       - post_list[:category_posts].each do |post|
         = link_to dashboard_path(post) do
           = image_tag post[:photo_urls][:cropped]

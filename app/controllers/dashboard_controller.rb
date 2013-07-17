@@ -4,6 +4,8 @@ class DashboardController < UserController
   def index
     if params[:source] == 'user'
       @posts = current_user.posts.order("created_at desc").paginate(page: params[:page], per_page: 15)
+    elsif params[:source] == 'loved'
+      @posts = current_user.loved_posts.order("created_at desc").paginate(page: params[:page], per_page: 15)
     else
       @posts = Post.order("created_at desc").paginate(page: params[:page], per_page: 15)
     end
