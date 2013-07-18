@@ -15,7 +15,13 @@ class FollowingsController < UserController
 
   def destroy
     @following = current_user.followings.find_by_following_id(params[:id])
-    @following.destroy
-    respond_with @following
+
+    if(@following)
+      @following.destroy
+      render :json => true 
+    else
+      render :json => false
+    end
   end
+  
 end
